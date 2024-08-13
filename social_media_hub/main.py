@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 import uvicorn
 import os
-from .routers import user, auth, post
+from social_media_hub.routers import user, auth, post
 
 app = FastAPI(
     title="Social media hub",
@@ -27,4 +27,7 @@ def main():
     """
     Launch web server
     """
-    uvicorn.run("social_media_hub.main:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run("social_media_hub.main:app", host="0.0.0.0", port=8000, reload=True)
+
+if __name__ == '__main__':
+    main()
