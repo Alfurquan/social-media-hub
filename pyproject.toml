@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "social-media-hub"
+version = "0.1.0"
+description = ""
+authors = ["Alfurquan Zahedi <alzahedi@microsoft.com>"]
+readme = "README.md"
+packages = [{include = "social_media_hub"}]
+
+[tool.poetry.plugins.dotenv]
+ignore = "false"
+location = ".env"
+
+[tool.poetry.scripts]
+social-media-hub = "social_media_hub.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyjwt = "^2.9.0"
+sqlalchemy = "^2.0.32"
+fastapi = "^0.112.0"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+uvicorn = "^0.30.5"
+python-multipart = "^0.0.9"
+pydantic = {extras = ["email"], version = "^2.8.2"}
+aiofiles = "^24.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,5 @@
+.env
+poetry.lock
+__pycache__
+social-media-hub.db
+social_media_hub/static/images/
